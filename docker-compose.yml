@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api:
+    container_name: api
+    build: ./containers/go/
+    ports:
+      - 8080:8080
+    tty:
+      true
+    volumes:
+      - ./backend/api:/go/src/api
